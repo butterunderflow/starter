@@ -10,11 +10,6 @@ import lms.core.virtualize
 import lms.core.utils.time
 import lms.macros.SourceContext
 
-import gensym.structure.lattices._
-import gensym.structure.monad._
-
-import gensym.lmsx.smt._
-
 import scala.collection.immutable.{List => StaticList}
 
 // C++ reference and pointer type
@@ -46,9 +41,7 @@ trait SAIOps extends Base
     with PrimitiveOpsOpt with LiftPrimitives with Equal with RangeOps
     with OrderingOps  with LiftVariables  with TupleOpsOpt with StringOps
     with ListOpsOpt   with MapOpsOpt      with SetOpsOpt
-    with EitherOps    with RepLattices    with RepMonads
-    with SMTBaseOps   with SMTBitVecOps   with SMTArrayOps {
-    // with SMTStagedOps {
+    with EitherOps {
   import scala.collection.mutable.HashMap
 
   val funNameMap: HashMap[Backend.Sym, String] = new HashMap()

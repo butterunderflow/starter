@@ -9,12 +9,9 @@ import lms.core.virtualize
 import lms.core.utils.time
 import lms.macros.SourceContext
 
-import gensym.lmsx.smt._
-
 trait CppSAICodeGenBase extends ExtendedCPPCodeGen
     with CppCodeGen_List with CppCodeGen_Tuple   with CppCodeGen_Map
-    with CppCodeGen_Set  with CppCodeGen_String   with CppCodeGen_Either
-    with STPCodeGen_SMTBase with STPCodeGen_SMTBV with STPCodeGen_SMTArray {
+    with CppCodeGen_Set  with CppCodeGen_String   with CppCodeGen_Either {
 
   override def remap(m: Manifest[_]): String = {
     val name = m.runtimeClass.getName
