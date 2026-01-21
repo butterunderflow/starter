@@ -6,7 +6,7 @@ import lms.core.stub.Adapter
 
 import starter._
 
-class TestStagedConcolicEval extends FunSuite {
+class TestExample extends FunSuite {
     import sys.process._
 
   def testExample() = {
