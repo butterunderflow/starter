@@ -1,0 +1,4 @@
+[submodule "third-party/lms-clean"]
+  path = third-party/lms-clean
+	url = https://github.com/TiarkRompf/lms-clean
+  ignore = dirty
